@@ -1,0 +1,6 @@
+venv/*
+.google-cookie
+.vscode
+__pycache__/*
+secrets.py
+

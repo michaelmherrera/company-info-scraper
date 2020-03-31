@@ -1,0 +1,2 @@
+false_hits = ['yellowpages.com', 'linkedin.com', 'wikipedia.com', 'facebook.com', 'yelp.com', 'thebluebook.com'\
+    'texaxbids.us', 'texaspain.org']
