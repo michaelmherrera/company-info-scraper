@@ -1,17 +1,10 @@
-from googlesearch import search 
 from urllib.parse import urlparse
-from googlequery import google_query
+from googlesearch import search
 import pandas as pd
 import os, time, random
 
-#TODO: Change for GitHub upload
-#Get api_key and cse_id for Google search
-from secrets import API_KEY, CSE_ID
-
 file_name = 'dummy.csv' #'texas_firms_roster.csv'
 new_file = 'dummy_output.csv' #'texas_firms_roster_with_domain.csv'
-
-#Here's a comment
 
 #TODO: Remove this once done testing
 def delete_old_output(new_file):
@@ -21,15 +14,19 @@ def delete_old_output(new_file):
     else:
         print("The file does not exist") 
 
+def get_urls(query, result_index, n):
+    results = search(query, tld="com", num=n, start=result_index, stop=result_index+1, pause=2)
+    return list(results)
+
 
 def get_domain(query):
     """Given a query, returns the domain of the first Google search result
 
     """
-    #Google query with num = 1 returns a list 1 link, we so use [0] to get the link
+    #get_urls with num = 1 returns a list 1 link, we so use [0] to get the link
     links = []
     try:
-        links = google_query(query, API_KEY, CSE_ID, num=1)
+        links = get_urls(query, 1, n=1)
     except:
         print("BAD QUERY: " + query)
         return "BADQUERY"
@@ -40,7 +37,10 @@ def get_domain(query):
     return domain
 
 def set_up_dataframe(file_name):
-    """Given the path to a csv file, sets up a dataframe from the file and adds the fields 'www' and 'domain' at the end
+    """Given path to a csv, sets up the dataframe
+    
+    Given the path to a csv file, sets up a dataframe from the 
+    file and adds the fields 'www' and 'domain' at the end
 
     """  
     df = pd.read_csv(file_name)
@@ -69,24 +69,3 @@ df = set_up_dataframe(file_name)
 df = name_address_search(df)
 print(df)
 df.to_csv(new_file)
-    
-
-
-
-
-
-'''Old Search Strat'''
-# def query_request(query, result_index):
-#     results = search(query, tld="com", num=1, start=result_index, stop=result_index+1, pause=2)
-#     result = list(results)[0]
-#     domain = urlparse(result)[1]
-#     if 'www' in domain:
-#         domain = domain[4:]
-#     print("Query: {} | Domain: {}".format(query, domain))
-#     return domain
-
-# def get_good_domain(company_name, company_address):
-#     query = company_name + ' ' + company_address
-#     result_index = 0
-#     domain = query_request(query, result_index)
-#     return domain
