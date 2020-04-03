@@ -1,25 +1,56 @@
-firm_name	name_and_address	name_link	name_good	name_address_link	name_address_good	firm_address1	firm_address2	firm_city	firm_state	firm_zip
-GONZALEZ ENGINEERING & SURVEYING INC	GONZALEZ ENGINEERING & SURVEYING INC PO BOX 3104  BROWNSVILLE TX 78523-3104					PO BOX 3104		BROWNSVILLE	TX	78523-3104
-JOSE I GUERRA INC	JOSE I GUERRA INC 2401 S IH 35 STE 210  AUSTIN TX 78741					2401 S IH 35 STE 210		AUSTIN	TX	78741
-ACCUTECH CONSULTANTS LLC	ACCUTECH CONSULTANTS LLC 909 NE LOOP 410 STE 900  SAN ANTONIO TX 78209					909 NE LOOP 410 STE 900		SAN ANTONIO	TX	78209
-Mark A Wallace DBA Action Engineering	Mark A Wallace DBA Action Engineering 6910 Priscilla Drive  Austin TX 78752-3138					6910 Priscilla Drive		Austin	TX	78752-3138
-ADTEK ENGINEERS INC	"ADTEK ENGINEERS INC 9990 Fairfax Blvd, Suite 300  Fairfax VA 22030"					"9990 Fairfax Blvd, Suite 300"		Fairfax	VA	22030
-ADV CONSULTING ENGINEERS INC DBA ADVANCED CONSULTING ENGINEERS	ADV CONSULTING ENGINEERS INC DBA ADVANCED CONSULTING ENGINEERS 5524 BEE CAVES RD STE I-4  AUSTIN TX 78746					5524 BEE CAVES RD STE I-4		AUSTIN	TX	78746
-"Wood Environment & Infrastructure Solutions, Inc."	"Wood Environment & Infrastructure Solutions, Inc. Attn  Louise Reed 2020 Winston Park Drive, Ste. 700 Oakville ON L6H 6X7"					Attn  Louise Reed	"2020 Winston Park Drive, Ste. 700"	Oakville	ON	L6H 6X7
-"Alan Plummer and Associates, Inc. DBA Alan Plummer Associates, Inc."	"Alan Plummer and Associates, Inc. DBA Alan Plummer Associates, Inc. 1320 South University Dr. Suite 300 Ft. Worth TX 76107"					1320 South University Dr.	Suite 300	Ft. Worth	TX	76107
-ALEGRO ENGINEERING LP	ALEGRO ENGINEERING LP 5822 CROMO DRIVE SUITE 105 EL PASO TX 79912					5822 CROMO DRIVE	SUITE 105	EL PASO	TX	79912
-ALPHA ENGINEERING	ALPHA ENGINEERING PO BOX 1251  KINGSVILLE TX 78364					PO BOX 1251		KINGSVILLE	TX	78364
-ALTON E GREEVEN PE CONSULTING ENGINEER	ALTON E GREEVEN PE CONSULTING ENGINEER 2611 WOODMONT AVE  AUSTIN TX 78703					2611 WOODMONT AVE		AUSTIN	TX	78703
-A N A Consultants LLC	A N A Consultants LLC 5000 Thompson Terrace  Colleyville TX 76053					5000 Thompson Terrace		Colleyville	TX	76053
-AMERICAN FOUNDATION CONSULTANTS INC	AMERICAN FOUNDATION CONSULTANTS INC PO BOX 691731  SAN ANTONIO TX 78269					PO BOX 691731		SAN ANTONIO	TX	78269
-AMERICAN STEAM INC	AMERICAN STEAM INC PO BOX 1149  WYLIE TX 75098					PO BOX 1149		WYLIE	TX	75098
-AMISTAD CONSULTING SERVICES INC	AMISTAD CONSULTING SERVICES INC 501 E GARFIELD ST  DEL RIO TX 78840					501 E GARFIELD ST		DEL RIO	TX	78840
-"ASC, Apex Safety Consultants, LLC"	"ASC, Apex Safety Consultants, LLC 1301 REGENTS PARK DR #101  HOUSTON TX 77058"					1301 REGENTS PARK DR #101		HOUSTON	TX	77058
-ARIAS & ASSOCIATES INC DBA Arias/Arias Geoprofessionals	ARIAS & ASSOCIATES INC DBA Arias/Arias Geoprofessionals ATTN Amber Hawkins 142 CHULA VISTA Drive SAN ANTONIO TX 78232					ATTN Amber Hawkins	142 CHULA VISTA Drive	SAN ANTONIO	TX	78232
-"ARJO ENGINEERS, INC"	"ARJO ENGINEERS, INC 5501 LBJ Freeway, Suite 435  Dallas TX 75240"					"5501 LBJ Freeway, Suite 435"		Dallas	TX	75240
-Ascent Engineering Inc	Ascent Engineering Inc 12 Greenway Plaza Ste 1100 (PMB 142)  Houston TX 77046-1203					12 Greenway Plaza Ste 1100 (PMB 142)		Houston	TX	77046-1203
-"Civil & Environmental Consultants, Inc."	"Civil & Environmental Consultants, Inc. 3711 S Mopac Expressway Building 1, Suite 550 Austin TX 78746"					3711 S Mopac Expressway	"Building 1, Suite 550"	Austin	TX	78746
-ATSER LP	ATSER LP ATTN  Charlene Martinez 1150 RICHCREST DR HOUSTON TX 77060					ATTN  Charlene Martinez	1150 RICHCREST DR	HOUSTON	TX	77060
-AUSTROP ENGINEERING INC	AUSTROP ENGINEERING INC 2851 LA VENTANA PKWY  DRIFTWOOD TX 78619					2851 LA VENTANA PKWY		DRIFTWOOD	TX	78619
-AVIATION ALLIANCE INC	AVIATION ALLIANCE INC PO BOX 799  COLLEYVILLE TX 76034-0799					PO BOX 799		COLLEYVILLE	TX	76034-0799
-AVILES ENGINEERING CORPORATION	AVILES ENGINEERING CORPORATION 5790 WINDFERN RD  HOUSTON TX 77041					5790 WINDFERN RD		HOUSTON	TX	77041
+Firm Name,name_address_link,Good?,name_link,Good?,righ_address_wrong_name,name_city_state,Good?,right_address_wrong_namecitystate,righ_name_wrong_namecitystate,total,manual_search,manual_notes
+GONZALEZ ENGINEERING & SURVEYING INC,www.bedc.com,No,www.bedc.com,No,,www.bedc.com,No,,,FALSE,https://gonzalezengineering.business.site/,
+JOSE I GUERRA INC,www.guerra.com,Yes,www.guerra.com,Yes,,www.guerra.com,Yes,,,www.guerra.com,,
+ACCUTECH CONSULTANTS LLC,www.yellowpages.com,No,www.linkedin.com,No,,www.texasbids.us,No,,,FALSE,None,
+Mark A Wallace DBA Action Engineering,www.linkedin.com,No,www.pressroom.ups.com,No,,www.texaschildrens.org,No,,,FALSE,None,
+ADTEK ENGINEERS INC,www.adtekengineers.com,Yes,www.adtekengineers.com,Yes,,www.adtekengineers.com,Yes,,,www.adtekengineers.com,,
+ADV CONSULTING ENGINEERS INC DBA ADVANCED CONSULTING ENGINEERS,www.acengrs.com,Yes,www.acengrs.com,Yes,,www.acengrs.com,Yes,,,www.acengrs.com,,
+"Wood Environment & Infrastructure Solutions, Inc.",www.canadianlawlist.com,No,www.woodplc.com,Yes,,www.dnb.com,No,,Yes,www.woodplc.com,,
+"Alan Plummer and Associates, Inc. DBA Alan Plummer Associates, Inc.",www.apaienv.com,Yes,www.apaienv.com,Yes,,www.apaienv.com,Yes,,,www.apaienv.com,,
+ALEGRO ENGINEERING LP,www.yellowpages.com,No,www.alegro-engineering.com,Yes,,www.yellowpages.com,No,,Yes,www.alegro-engineering.com,,
+ALPHA ENGINEERING,www.porch.com,No,www.alphaengineering.com,No,,www.kingsville.org,Yes,,,www.kingsville.org,,
+ALTON E GREEVEN PE CONSULTING ENGINEER,www.porch.com,No,www.porch.com,No,,www.porch.com,No,,,FALSE,None,
+A N A Consultants LLC,www.manta.com,No,www.anallc.com,Yes,,www.anallc.com,Yes,,,www.anallc.com,,
+AMERICAN FOUNDATION CONSULTANTS INC,www.corporationwiki.com,No,www.linkedin.com,No,,www.corporationwiki.com,No,,,FALSE,None,
+AMERICAN STEAM INC,www.chamberofcommerce.com,No,www.americansteam.com,Yes,,www.americansteam.com,Yes,,,www.americansteam.com,,
+AMISTAD CONSULTING SERVICES INC,www.yellowpages.com,No,www.tsps.org,No,,www.facebook.com,No,,,FALSE,None,
+"ASC, Apex Safety Consultants, LLC",www.opencorporates.com,No,www.linkedin.com,No,,www.opencorporates.com,No,,,FALSE,None,
+ARIAS & ASSOCIATES INC DBA Arias/Arias Geoprofessionals,www.linkedin.com,No,www.ariasinc.com,Yes,,www.ariasinc.com,Yes,,,www.ariasinc.com,,
+"ARJO ENGINEERS, INC",www.bbb.org,No,www.arjoengineers.com,Yes,,www.arjoengineers.com,Yes,,,www.arjoengineers.com,,
+Ascent Engineering Inc,www.ascentengineering.com,Yes,www.ascenteg.com,No,,www.ascentengineering.com,Yes,,,www.ascentengineering.com,,
+"Civil & Environmental Consultants, Inc.",www.cecinc.com,Yes,www.cecinc.com,Yes,,www.cecinc.com,Yes,,,www.cecinc.com,,
+ATSER LP,www.linkedin.com,No,www.atser.com,Yes,,www.atser.com,Yes,,,www.atser.com,,
+AUSTROP ENGINEERING INC,www.opencorporates.com,No,www.opencorporates.com,No,,www.opencorporates.com,No,,,FALSE,None,
+AVIATION ALLIANCE INC,www.opencorporates.com,No,www.aviationallianceinc.com,Yes,,www.aviationallianceinc.com,Yes,,,www.aviationallianceinc.com,,
+AVILES ENGINEERING CORPORATION,www.avilesengineering.com,Yes,www.avilesengineering.com,Yes,,www.avilesengineering.com,Yes,,,www.avilesengineering.com,,
+Axiom Engineers Inc.,www.axiomengineers.com,No,www.axiomengineers.com,No,,www.axiomtexas.com,Yes,,,www.axiomtexas.com,,
+"BAIRD HAMPTON & BROWN, INC.",www.bhbinc.com,Yes,www.bhbinc.com,Yes,,www.bhbinc.com,Yes,,,www.bhbinc.com,,
+BARNEY BALLARD CORPORATION,www.barneyballardengineering.com,Yes,www.barneyballardengineering.com,Yes,,www.barneyballardengineering.com,Yes,,,www.barneyballardengineering.com,,
+BARRY ENGINEERING INC,www.barryengineering.com,Yes,www.barryengineering.com,Yes,,www.barryengineering.com,Yes,,,www.barryengineering.com,,
+BASS & WELSH ENGINEERING,www.bass-welsh.com,Yes,www.bass-welsh.com,Yes,,www.bass-welsh.com,Yes,,,www.bass-welsh.com,,
+THE ARIZPE GROUP INC DBA ARIZPE,www.facebook.com,No,www.arizpe.com,Yes,,www.arizpe.com,Yes,,,www.arizpe.com,,
+THE WALLACE GROUP INC,www.porch.com,No,www.thewallacegroupinc.com,No,,www.manta.com,No,,,FALSE,None,
+W A NEEL COMPANY INC,www.corporationwiki.com,No,www.manta.com,No,,www.manta.com,No,,,FALSE,None,
+Waid Corporation DBA Waid Environmental,www.waid.com,Yes,www.waid.com,Yes,,www.waid.com,Yes,,,www.waid.com,,
+WALDEMAR S. NELSON & COMPANY INC.,www.wsnelson.com,Yes,www.wsnelson.com,Yes,,www.wsnelson.com,Yes,,,www.wsnelson.com,,
+"Walker/Diloreto/Younie Inc DBA WDY, Inc.",www.porch.com,No,www.govtribe.com,No,,www.bbb.org,No,,,FALSE,None,
+WALTER NELSON AND ASSOCIATES,www.manta.com,No,www.walterenelson.com,No,,www.manta.com,No,,,FALSE,None,
+WEISHUHN ENGINEERING INC,www.wei-eng.com,Yes,www.wei-eng.com,Yes,,www.wei-eng.com,Yes,,,www.wei-eng.com,,
+WEISMAN ENGINEERING,www.manta.com,No,www.linkedin.com,No,,www.manta.com,No,,,FALSE,None,
+"Weisser Engineering Company, Inc. DBA Weisser Engineering Company / Weisser Engineering & Surveying",www.linkedin.com,No,www.linkedin.com,No,,www.linkedin.com,No,,,FALSE,https://www.weissereng.com/,From Google sidebar
+WHITE ENGINEERING ASSOCIATES INC,www.yellowpages.com,No,www.weainc.com,Yes,,www.weainc.com,Yes,,,www.weainc.com,,
+WRES Inc,www.start.cortera.com,No,www.wrestlinginc.com,No,,www.mapquest.com,No,,,FALSE,http://www.wres.us/Index.html,
+"WDP & Associates Consulting Engineers, Inc",www.wdpa.com,Yes,www.wdpa.com,Yes,,www.wdpa.com,Yes,,,www.wdpa.com,,
+WILLIAMSON PETROLEUM CONSULTANTS INC,www.wpc-inc.com,Yes,www.wpc-inc.com,Yes,,www.wpc-inc.com,Yes,,,www.wpc-inc.com,,
+"TRC Pipeline Services, LLC",www.trccompanies.com,Yes,www.trccompanies.com,Yes,,www.trccompanies.com,Yes,,,www.trccompanies.com,,
+"WILLIAM A WALLACE-STRUCTURAL ENGINEERING RESOURCES,PLLC DBA Structural Engineering,PLLC Resources",www.wallacestructural.com,Yes,www.wallacestructural.com,Yes,,www.wallacestructural.com,Yes,,,www.wallacestructural.com,,
+WILLIAM M COBB & ASSOCIATES INC,www.wmcobb.com,Yes,www.wmcobb.com,Yes,,www.wmcobb.com,Yes,,,www.wmcobb.com,,
+WILSON ENGINEERING,www.loopnet.com,No,www.wilsonco.com,No,,www.wilsonengr.com,No,,,FALSE,None,
+WINKELMANN & ASSOCIATES INC,www.winkelmann.com,Yes,www.winkelmann.com,Yes,,www.winkelmann.com,Yes,,,www.winkelmann.com,,
+WINTER ENTERPRISES,www.zillow.com,No,www.bloomberg.com,No,,www.bbb.org,No,,,FALSE,None,
+,,,,,,,,,,,,
+,,Num Correct:,,Num Correct:,Count,,Num Correct:,Count,Count,None-found,Manual-findable,
+,,20,,29,4,,30,0,2,17,3,
+,,,,,,,,,,,,
+,,,,,,,,,,,Non-existent,
+,,,,,,,,,,,14,
