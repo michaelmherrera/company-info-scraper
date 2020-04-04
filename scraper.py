@@ -5,13 +5,17 @@ import os, time, random
 
 file_name = 'dummy.csv' #'texas_firms_roster.csv'
 new_file = 'dummy_output.csv' #'texas_firms_roster_with_domain.csv'
-_counter = 0
 
 #TODO: Remove this once done testing
 def delete_old_output(new_file):
     import os
     if os.path.exists(new_file):
         os.remove(new_file)
+    else:
+        print("The file does not exist")
+    temp_name = "INCOMPLETE_" + new_file
+    if os.path.exists(temp_name):
+        os.remove(temp_name)
     else:
         print("The file does not exist") 
 
@@ -20,24 +24,27 @@ def get_urls(query, result_index):
     return list(results)
 
 
-def get_domain(query):
-    global _counter
+def get_domain(query, index, bad_queries):
     """Given a query, returns the domain of the first Google search result
 
     """
     #get_urls with num = 1 returns a list 1 link, we so use [0] to get the link
-    # try:
-    links = get_urls(query, 0)
-    link = links[0]
-    domain = urlparse(link)[1]
-    if 'www' in domain:
-        domain = domain[4:]
-    print("{} Query: {} | Domain: {}".format(_counter, query, domain))
-    _counter+=1
+    links = []
+    link = ''
+    try:
+        links = get_urls(query, 0)
+        link = links[0]
+        domain = urlparse(link)[1]
+        if 'www' in domain:
+            domain = domain[4:]
+        print("{} Query: {} | Domain: {}".format(index, query, domain))
+    except:
+        print("BAD QUERY: " + query)
+        bad_queries += 1
+        return "BADQUERY"
+    bad_queries = 0
     return domain
-    # except:
-    #     print("BAD QUERY: " + query)
-    #     return "BADQUERY"
+    
     
 
 def set_up_dataframe(file_name):
@@ -53,24 +60,61 @@ def set_up_dataframe(file_name):
     df.insert(index+1, 'domain', None)
     return df
 
-def name_city_state_search(df):
+def get_yes_no(message):
+    print(message)
+    proceed = ""
+    while(True):
+        proceed = input("[Y/N]")
+        if proceed == 'Y':
+            return True
+        elif proceed == 'N':
+            return False
+
+def bad_queries_fail(i):
+    proceed = get_yes_no("Crawler encountered 10 bad queries in a row. Proceed?")
+    if proceed:
+        return
+    else:
+        df.to_csv("FAILED_BAD_QUERIES_0-{}.csv".format(i))
+        print("Exiting...")
+        exit() 
+
+def get_name_address(i):
+    name = df.iloc[i,0]
+    address = ""
+    for j in range(2,5):
+        frag = str(df.iloc[i,j])
+        if frag != "nan":
+            address = address + frag + ' '
+    return name, address
+
+
+def crawl(df, new_file):
+    bad_queries = 0
     num_rows = df.shape[0]
     domain_index = list(df.columns).index('domain')
     for i in range(num_rows):
-        name = df.iloc[i,0]
-        address = ""
-        for j in range(2,5):
-            frag = str(df.iloc[i,j])
-            if frag != "nan":
-                address = address + frag + ' '
-        domain = get_domain(name + ' ' + address)
+        name, address = get_name_address(i)
+        domain = get_domain(name + ' ' + address, i, bad_queries)
         df.iat[i, domain_index] = domain
+        if bad_queries >= 10:
+            bad_queries_fail(i)
+        if i%100 == 0:
+            incremental_save(df, new_file, i)
     return df
 
 
+def init(file_name, new_file):
+    os.chdir("C:\\Users\\micha\\Documents\\Python-Projects\\company-info-scraper")
+    df = set_up_dataframe(file_name)
+    return df
+
+def incremental_save(df, new_file, index):
+    temp_name = "INCREMENTAL_SAVE_0-{}_{}".format(index, new_file)
+    df.to_csv(temp_name)
+    print("Saved incremental progress. Next index: {}".format(index+1))
+
 delete_old_output(new_file)
-df = set_up_dataframe(file_name)
-df = name_city_state_search(df)
-print()
-print(df)
+df = init(file_name, new_file)
+df = crawl(df, new_file)
 df.to_csv(new_file)
