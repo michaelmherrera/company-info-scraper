@@ -1,4 +1,3 @@
-import fileUtils
 import scraper
 import file_utils
 
