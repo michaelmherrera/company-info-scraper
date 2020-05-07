@@ -3,6 +3,7 @@ from googlesearch import search
 import util
 import pandas as pd
 import file_utils
+import logging
 
 ERROR_TOLERANCE = 10
 SAVE_FREQUENCY = 100 #How many entries to crawl before incremental save
